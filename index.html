@@ -158,7 +158,7 @@
     photo = document.getElementById('photo');
     startbutton = document.getElementById('startbutton');
 
-    navigator.mediaDevices.getUserMedia({video: true, audio: false})
+    navigator.mediaDevices.getUserMedia({video: {width: {exact: 3840}, height: {exact: 2160}, audio: false})
     .then(function(stream) {
       video.srcObject = stream;
       video.play();
